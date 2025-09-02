@@ -1,34 +1,61 @@
 import React from "react";
-import { View, Text, Button, Image, ScrollView, StyleSheet } from "react-native";
+import {
+  View,
+  Text,
+  Button,
+  Image,
+  ScrollView,
+  StyleSheet,
+  TouchableOpacity,
+} from "react-native";
 
-export default function ComponentScavenger() {
+export default function ComponentScavenger({ navigation }) {
   return (
     <ScrollView contentContainerStyle={styles.container}>
-      <Text style={styles.title}>Welcome to German's App!</Text>
+      {/* Header Section */}
+      <Text style={styles.title}>👋 Welcome to German's App!</Text>
+      <Text style={styles.subtitle}>Explore React Native components in action</Text>
 
-      <Image
-        source={require("../Pictures/n1.jpg")}
-        style={styles.image}
-      />
+      {/* Card Section */}
+      <View style={styles.card}>
+        <Image source={require("../Pictures/n1.jpg")} style={styles.image} />
+        <Text style={styles.cardText}>
+          This screen demonstrates using <Text style={styles.highlight}>Text</Text>,{" "}
+          <Text style={styles.highlight}>Button</Text>,{" "}
+          <Text style={styles.highlight}>Image</Text>, and{" "}
+          <Text style={styles.highlight}>ScrollView</Text>.
+        </Text>
+      </View>
 
-      <Text style={styles.text}>
-        This screen demonstrates using Text, Button, Image, and ScrollView.
-      </Text>
+      {/* Buttons Section */}
+      <View style={styles.buttonGroup}>
+        <TouchableOpacity style={styles.appButton} onPress={() => alert("Button Pressed!")}>
+          <Text style={styles.appButtonText}>Click Me!</Text>
+        </TouchableOpacity>
 
-      <Button title="Click Me!" onPress={() => alert("Button Pressed!")} />
+        <TouchableOpacity style={styles.appButton} onPress={() => alert("Second Button Pressed!")}>
+          <Text style={styles.appButtonText}>Second Button</Text>
+        </TouchableOpacity>
 
-      {/* Extra content for scrolling */}
-      <Text style={styles.text}>Here is some more sample content...</Text>
-      <Button title="Second Button" onPress={() => alert("Second Button Pressed!")} />
+        <TouchableOpacity style={styles.appButton} onPress={() => alert("Third Button Pressed!")}>
+          <Text style={styles.appButtonText}>Third Button</Text>
+        </TouchableOpacity>
 
-      <Text style={styles.text}>Keep scrolling for more!</Text>
-      <Button title="Third Button" onPress={() => alert("Third Button Pressed!")} />
+        <TouchableOpacity style={styles.appButton} onPress={() => alert("Fourth Button Pressed!")}>
+          <Text style={styles.appButtonText}>Fourth Button</Text>
+        </TouchableOpacity>
+      </View>
 
-      <Text style={styles.text}>Almost there, just a little more scrolling...</Text>
-      <Button title="Fourth Button" onPress={() => alert("Fourth Button Pressed!")} />
-
-      <Text style={styles.text}>You made it to the bottom of the scroll!</Text>
-      <Button title="Final Button" onPress={() => alert("Final Button Pressed!")} />
+      {/* Final Button */}
+      <View style={styles.footer}>
+        <Text style={styles.footerText}>Wazzup Sir</Text>
+        <TouchableOpacity
+          style={styles.finalButton}
+          onPress={() => navigation.navigate("SpotifyLogin")}
+        >
+          <Text style={styles.finalButtonText}>Go to Spotify Login</Text>
+        </TouchableOpacity>
+      </View>
     </ScrollView>
   );
 }
@@ -36,25 +63,86 @@ export default function ComponentScavenger() {
 const styles = StyleSheet.create({
   container: {
     flexGrow: 1,
-    justifyContent: "center",
-    alignItems: "center",
     padding: 20,
-    backgroundColor: "#f5f5f5",
+    backgroundColor: "#f0f4f8",
+    alignItems: "center",
   },
   title: {
-    fontSize: 20,
+    fontSize: 26,
     fontWeight: "bold",
+    color: "#333",
+    marginBottom: 5,
+  },
+  subtitle: {
+    fontSize: 16,
+    color: "#666",
     marginBottom: 20,
   },
-  text: {
-    fontSize: 16,
-    marginVertical: 10,
-    textAlign: "center",
+  card: {
+    backgroundColor: "white",
+    borderRadius: 15,
+    padding: 20,
+    alignItems: "center",
+    marginBottom: 20,
+    width: "100%",
+    shadowColor: "#000",
+    shadowOpacity: 0.1,
+    shadowRadius: 6,
+    elevation: 5,
   },
   image: {
-    width: 150,
-    height: 150,
-    marginBottom: 20,
-    borderRadius: 10,
+    width: 180,
+    height: 180,
+    borderRadius: 15,
+    marginBottom: 15,
+  },
+  cardText: {
+    fontSize: 16,
+    color: "#444",
+    textAlign: "center",
+  },
+  highlight: {
+    fontWeight: "bold",
+    color: "#1DB954",
+  },
+  buttonGroup: {
+    width: "100%",
+    marginVertical: 20,
+  },
+  appButton: {
+    backgroundColor: "#1DB954",
+    paddingVertical: 14,
+    borderRadius: 30,
+    marginVertical: 8,
+    alignItems: "center",
+    shadowColor: "#000",
+    shadowOpacity: 0.15,
+    shadowRadius: 4,
+    elevation: 3,
+  },
+  appButtonText: {
+    color: "white",
+    fontSize: 16,
+    fontWeight: "bold",
+  },
+  footer: {
+    marginTop: 30,
+    alignItems: "center",
+  },
+  footerText: {
+    fontSize: 16,
+    marginBottom: 15,
+    color: "#333",
+  },
+  finalButton: {
+    backgroundColor: "#000",
+    paddingVertical: 16,
+    paddingHorizontal: 30,
+    borderRadius: 35,
+  },
+  finalButtonText: {
+    color: "#1DB954",
+    fontSize: 16,
+    fontWeight: "bold",
   },
 });
