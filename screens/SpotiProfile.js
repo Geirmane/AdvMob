@@ -6,13 +6,13 @@ export default function SpotiProfile() {
     <View style={styles.container}>
       {/* Profile Image */}
       <Image
-        source={require("../Pictures/n1.jpg")} // profile picture
+        source={require("../Pictures/g4.jpg")} // profile picture
         style={styles.profileImage}
       />
 
       {/* Name & Email */}
       <Text style={styles.name}>German Felisarta IV</Text>
-      <Text style={styles.email}>german@example.com</Text>
+      <Text style={styles.email}>gfelisarta44@gmail.com</Text>
 
       {/* Edit Button */}
       <TouchableOpacity style={styles.editButton}>

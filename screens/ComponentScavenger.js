@@ -20,11 +20,8 @@ export default function ComponentScavenger({ navigation }) {
       <View style={styles.card}>
         <Image source={require("../Pictures/n1.jpg")} style={styles.image} />
         <Text style={styles.cardText}>
-          This screen demonstrates using <Text style={styles.highlight}>Text</Text>,{" "}
-          <Text style={styles.highlight}>Button</Text>,{" "}
-          <Text style={styles.highlight}>Image</Text>, and{" "}
-          <Text style={styles.highlight}>ScrollView</Text>.
-        </Text>
+          This screen is my screen of Projects...Which is still in the making.{" "}
+           </Text>
       </View>
 
       {/* Buttons Section */}

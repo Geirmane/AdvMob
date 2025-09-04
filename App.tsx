@@ -8,6 +8,8 @@ import ComponentScavenger from "./screens/ComponentScavenger";
 import SpotifyLogin from "./screens/SpotifyLogin";
 import SignUpScreen from "./screens/SignUpScreen";
 import SpotiHome from "./screens/SpotiHome";
+import SpotiProfile from "./screens/SpotiProfile"; // ✅ Import your profile screen
+import SpotiSettings from "./screens/SpotiSettings";
 
 const Stack = createStackNavigator();
 
@@ -19,6 +21,9 @@ function MainStack() {
       <Stack.Screen name="SpotifyLogin" component={SpotifyLogin} />
       <Stack.Screen name="SignUpScreen" component={SignUpScreen} />
       <Stack.Screen name="SpotiHome" component={SpotiHome} />
+      <Stack.Screen name="SpotiProfile" component={SpotiProfile} />
+      <Stack.Screen name="SpotiSettings" component={SpotiSettings} />
+      {/* ✅ Add profile screen here */}
     </Stack.Navigator>
   );
 }
