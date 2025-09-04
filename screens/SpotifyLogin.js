@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import {
   View,
   Text,
@@ -8,9 +8,7 @@ import {
   Image,
 } from "react-native";
 
-export default function SpotifyLogin() {
-  const [isSignUp, setIsSignUp] = useState(false); // toggle between login/signup
-
+export default function SpotifyLogin({ navigation }) {
   return (
     <View style={styles.container}>
       {/* Logo and Title */}
@@ -22,95 +20,57 @@ export default function SpotifyLogin() {
         <Text style={styles.title}>Spotify</Text>
       </View>
 
-      {/* If user is in SignUp mode */}
-      {isSignUp ? (
-        <>
-          {/* Full Name Input */}
-          <TextInput
-            style={styles.input}
-            placeholder="Full Name"
-            placeholderTextColor="#aaa"
-          />
+      {/* Username Input */}
+      <TextInput
+        style={styles.input}
+        placeholder="Username"
+        placeholderTextColor="#aaa"
+      />
 
-          {/* Email Input */}
-          <TextInput
-            style={styles.input}
-            placeholder="Email Address"
-            placeholderTextColor="#aaa"
-            keyboardType="email-address"
-          />
+      {/* Password Input */}
+      <TextInput
+        style={styles.input}
+        placeholder="Password"
+        placeholderTextColor="#aaa"
+        secureTextEntry
+      />
 
-          {/* Password Input */}
-          <TextInput
-            style={styles.input}
-            placeholder="Password"
-            placeholderTextColor="#aaa"
-            secureTextEntry
-          />
+      {/* Forgot Password */}
+      <TouchableOpacity style={styles.forgotContainer}>
+        <Text style={styles.forgotText}>Forgot password?</Text>
+      </TouchableOpacity>
 
+      {/* ✅ Sign In Button now navigates */}
+      <TouchableOpacity
+        style={styles.signInButton}
+        onPress={() => navigation.navigate("SpotiHome")}
+      >
+        <Text style={styles.signInText}>Sign In</Text>
+      </TouchableOpacity>
 
-          {/* Sign Up Button */}
-          <TouchableOpacity style={styles.signInButton}>
-            <Text style={styles.signInText}>Sign Up</Text>
-          </TouchableOpacity>
+      {/* Divider */}
+      <Text style={styles.orText}>Be Correct With</Text>
 
-          {/* Switch back to Login */}
-          <Text style={styles.footerText}>
-            Already have an account?{" "}
-            <Text style={styles.signUp} onPress={() => setIsSignUp(false)}>
-              Sign In
-            </Text>
-          </Text>
-        </>
-      ) : (
-        <>
-          {/* Username Input */}
-          <TextInput
-            style={styles.input}
-            placeholder="Username"
-            placeholderTextColor="#aaa"
-          />
+      {/* Social Buttons */}
+      <View style={styles.socialContainer}>
+        <TouchableOpacity style={styles.socialButton}>
+          <Text style={styles.socialText}>f</Text>
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.socialButton}>
+          <Text style={styles.socialText}>G</Text>
+        </TouchableOpacity>
+      </View>
 
-          {/* Password Input */}
-          <TextInput
-            style={styles.input}
-            placeholder="Password"
-            placeholderTextColor="#aaa"
-            secureTextEntry
-          />
-
-          {/* Forgot Password */}
-          <TouchableOpacity style={styles.forgotContainer}>
-            <Text style={styles.forgotText}>Forgot password?</Text>
-          </TouchableOpacity>
-
-          {/* Sign In Button */}
-          <TouchableOpacity style={styles.signInButton}>
-            <Text style={styles.signInText}>Sign In</Text>
-          </TouchableOpacity>
-
-          {/* Divider */}
-          <Text style={styles.orText}>Be Correct With</Text>
-
-          {/* Social Buttons */}
-          <View style={styles.socialContainer}>
-            <TouchableOpacity style={styles.socialButton}>
-              <Text style={styles.socialText}>f</Text>
-            </TouchableOpacity>
-            <TouchableOpacity style={styles.socialButton}>
-              <Text style={styles.socialText}>G</Text>
-            </TouchableOpacity>
-          </View>
-
-          {/* Footer */}
-          <Text style={styles.footerText}>
-            Don’t have an account?{" "}
-            <Text style={styles.signUp} onPress={() => setIsSignUp(true)}>
-              Sign Up
-            </Text>
-          </Text>
-        </>
-      )}
+      {/* Footer */}
+      <Text style={styles.footerText}>
+        Don’t have an account?{" "}
+        <Text
+          style={styles.signUp}
+          onPress={() => navigation.navigate("SignUpScreen")}
+        >
+          Sign Up
+        </Text>
+      </Text>
     </View>
   );
 }

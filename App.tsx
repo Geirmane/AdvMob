@@ -6,18 +6,29 @@ import { createStackNavigator } from "@react-navigation/stack";
 
 import ComponentScavenger from "./screens/ComponentScavenger";
 import SpotifyLogin from "./screens/SpotifyLogin";
+import SignUpScreen from "./screens/SignUpScreen";
+import SpotiHome from "./screens/SpotiHome";
 
 const Stack = createStackNavigator();
+
+// 🔹 Your stack with all screens
+function MainStack() {
+  return (
+    <Stack.Navigator screenOptions={{ headerShown: false }}>
+      <Stack.Screen name="Home" component={ComponentScavenger} />
+      <Stack.Screen name="SpotifyLogin" component={SpotifyLogin} />
+      <Stack.Screen name="SignUpScreen" component={SignUpScreen} />
+      <Stack.Screen name="SpotiHome" component={SpotiHome} />
+    </Stack.Navigator>
+  );
+}
 
 export default function App() {
   return (
     <SafeAreaProvider>
       <StatusBar barStyle="light-content" />
       <NavigationContainer>
-        <Stack.Navigator screenOptions={{ headerShown: false }}>
-          <Stack.Screen name="Home" component={ComponentScavenger} />
-          <Stack.Screen name="SpotifyLogin" component={SpotifyLogin} />
-        </Stack.Navigator>
+        <MainStack />
       </NavigationContainer>
     </SafeAreaProvider>
   );
