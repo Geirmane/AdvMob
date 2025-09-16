@@ -1,9 +1,20 @@
 import React from "react";
 import { View, Text, StyleSheet, Image, TouchableOpacity } from "react-native";
+import { useNavigation } from "@react-navigation/native";
 
 export default function SpotiProfile() {
+  const navigation = useNavigation();
+
   return (
     <View style={styles.container}>
+      {/* Header with Back Button */}
+      <View style={styles.header}>
+        <TouchableOpacity style={styles.backButton} onPress={() => navigation.goBack()}>
+          <Text style={styles.backText}>←</Text>
+        </TouchableOpacity>
+        <Text style={styles.headerTitle}>Profile</Text>
+      </View>
+
       {/* Profile Image */}
       <Image
         source={require("../Pictures/g4.jpg")} // profile picture
@@ -27,14 +38,35 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: "#121212",
     alignItems: "center",
-    justifyContent: "center",
+    justifyContent: "flex-start",
     padding: 20,
+  },
+  header: {
+    flexDirection: "row",
+    alignItems: "center",
+    width: "100%",
+    paddingTop: 40,
+    paddingBottom: 20,
+  },
+  backButton: {
+    marginRight: 15,
+  },
+  backText: {
+    color: "white",
+    fontSize: 22,
+    fontWeight: "bold",
+  },
+  headerTitle: {
+    color: "white",
+    fontSize: 20,
+    fontWeight: "bold",
   },
   profileImage: {
     width: 120,
     height: 120,
     borderRadius: 60,
     marginBottom: 20,
+    marginTop: 40,
   },
   name: {
     fontSize: 20,

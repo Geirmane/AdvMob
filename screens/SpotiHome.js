@@ -167,7 +167,10 @@ export default function SpotiHome() {
           <Text style={styles.navText}>Library</Text>
         </TouchableOpacity>
 
-        <TouchableOpacity style={styles.navItem}>
+        <TouchableOpacity
+          style={styles.navItem}
+          onPress={() => navigation.navigate("SpotiPlaylistBuilder")}
+        >
           <Image
             source={require("../Pictures/lg4.png")}
             style={styles.navIcon}
@@ -280,7 +283,13 @@ const styles = StyleSheet.create({
   },
   playlistImage: { width: "100%", height: 100, borderRadius: 6, marginBottom: 6 },
   playlistText: { color: "white", fontSize: 14, fontWeight: "500" },
-  sectionTitle: { color: "white", fontSize: 18, fontWeight: "bold", marginVertical: 10, paddingHorizontal: 15 },
+  sectionTitle: {
+    color: "white",
+    fontSize: 18,
+    fontWeight: "bold",
+    marginVertical: 10,
+    paddingHorizontal: 15,
+  },
   albumCard: { width: 140, marginHorizontal: 10 },
   albumImage: { width: "100%", height: 140, borderRadius: 10, marginBottom: 5 },
   albumTitle: { color: "white", fontWeight: "600" },
@@ -288,16 +297,37 @@ const styles = StyleSheet.create({
   stationCard: { width: 160, marginHorizontal: 10 },
   stationImage: { width: "100%", height: 140, borderRadius: 10, marginBottom: 5 },
   stationTitle: { color: "white", fontWeight: "600" },
-  bottomNav: { flexDirection: "row", justifyContent: "space-around", paddingVertical: 10, borderTopWidth: 0.5, borderTopColor: "#333", backgroundColor: "#000" },
+  bottomNav: {
+    flexDirection: "row",
+    justifyContent: "space-around",
+    paddingVertical: 10,
+    borderTopWidth: 0.5,
+    borderTopColor: "#333",
+    backgroundColor: "#000",
+  },
   navItem: { alignItems: "center" },
   navText: { color: "white", fontSize: 12, marginTop: 3 },
   navIcon: { width: 24, height: 24, resizeMode: "contain" },
-  overlayContainer: { ...StyleSheet.absoluteFillObject, zIndex: 10, flexDirection: "row" },
+  overlayContainer: {
+    ...StyleSheet.absoluteFillObject,
+    zIndex: 10,
+    flexDirection: "row",
+  },
   overlayBackground: { flex: 1, backgroundColor: "rgba(0,0,0,0.5)" },
-  drawer: { width: width * 0.7, backgroundColor: "#1e1e1e", paddingTop: 60, paddingHorizontal: 20 },
+  drawer: {
+    width: width * 0.7,
+    backgroundColor: "#1e1e1e",
+    paddingTop: 60,
+    paddingHorizontal: 20,
+  },
   drawerContent: { flex: 1 },
   drawerProfile: { width: 80, height: 80, borderRadius: 40, marginBottom: 15 },
-  drawerName: { color: "white", fontSize: 18, fontWeight: "bold", marginBottom: 20 },
+  drawerName: {
+    color: "white",
+    fontSize: 18,
+    fontWeight: "bold",
+    marginBottom: 20,
+  },
   drawerItem: { paddingVertical: 12 },
   drawerText: { color: "white", fontSize: 16 },
 });
