@@ -1,5 +1,10 @@
-![Screenshots 0](./Screenshots/SpotiHome.png)
-![Screenshots 1](./Screenshots/w4p.png)
+![Screenshots 0](./Screenshots/SpotiLogin.png)
+![Screenshots 1](./Screenshots/SpotiSign.png)
+![Screenshots 2](./Screenshots/SpotiHome.png)
+![Screenshots 3](./Screenshots/SpotiDrawer.png)
+![Screenshots 4](./Screenshots/Profile.png)
+![Screenshots 5](./Screenshots/w4p.png)
+
 
 
 
