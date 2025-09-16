@@ -1,3 +1,4 @@
+![Screenshots 0](./Screenshots/SpotiHome.png)
 ![Screenshots 1](./Screenshots/w4p.png)
 
 
