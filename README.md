@@ -4,8 +4,18 @@
 ![Screenshots 3](./Screenshots/SpotiDrawer.png)
 ![Screenshots 4](./Screenshots/Profile.png)
 ![Screenshots 5](./Screenshots/w4p.png)
+
+
+
+
+
 ===============Week 4 Activity 2===============
 ![Screenshots 6](./Screenshots/profile2.webp)
+
+
+
+
+
 
 ===============Week 5 Activity 1===============
 ![Screenshots 7](./Screenshots/w51.jpg)
