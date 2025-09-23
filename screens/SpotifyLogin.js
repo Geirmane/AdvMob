@@ -41,12 +41,12 @@ export default function SpotifyLogin({ navigation }) {
       </TouchableOpacity>
 
       {/* ✅ Sign In Button now navigates */}
-      <TouchableOpacity
-        style={styles.signInButton}
-        onPress={() => navigation.navigate("SpotiHome")}
-      >
-        <Text style={styles.signInText}>Sign In</Text>
-      </TouchableOpacity>
+ <TouchableOpacity
+   style={styles.signInButton}
+   onPress={() => navigation.replace("SpotiHome")}  // ✅ replace instead of navigate
+ >
+   <Text style={styles.signInText}>Sign In</Text>
+ </TouchableOpacity>
 
       {/* Divider */}
       <Text style={styles.orText}>Be Correct With</Text>
