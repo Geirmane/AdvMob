@@ -8,9 +8,9 @@
 ![Screenshots 6](./Screenshots/profile2.webp)
 
 ===============Week 5 Activity 1===============
-![Screenshots 6](./Screenshots/w51.jpg)
-![Screenshots 6](./Screenshots/w52.jpg)
-![Screenshots 6](./Screenshots/w53.jpg)
+![Screenshots 7](./Screenshots/w51.jpg)
+![Screenshots 8](./Screenshots/w52.jpg)
+![Screenshots 9](./Screenshots/w53.jpg)
 
 
 
