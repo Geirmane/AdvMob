@@ -30,6 +30,10 @@
 
 
 ===============Week 6 Activity 2===============
+
+
+
+
 (Still In Development)
 ![Screenshots 10](./Screenshots/m1.jpg)
 
