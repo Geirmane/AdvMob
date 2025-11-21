@@ -16,6 +16,8 @@ import SpotiHome from "./screens/SpotiHome";
 import SpotiProfile from "./screens/SpotiProfile";
 import SpotiSettings from "./screens/SpotiSettings";
 import SpotiPlaylistBuilder from "./screens/SpotiPlaylistBuilder";
+import MapScreen from "./screens/MapScreen";
+
 
 const Stack = createStackNavigator();
 
@@ -51,6 +53,8 @@ function MainStack() {
       <Stack.Screen name="SpotiProfile" component={SpotiProfile} />
       <Stack.Screen name="SpotiSettings" component={SpotiSettings} />
       <Stack.Screen name="SpotiPlaylistBuilder" component={SpotiPlaylistBuilder} />
+      <Stack.Screen name="MapScreen" component={MapScreen} />
+
     </Stack.Navigator>
   );
 }

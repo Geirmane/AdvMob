@@ -2,7 +2,6 @@ import React from "react";
 import {
   View,
   Text,
-  Button,
   Image,
   ScrollView,
   StyleSheet,
@@ -21,36 +20,58 @@ export default function ComponentScavenger({ navigation }) {
         <Image source={require("../Pictures/n1.jpg")} style={styles.image} />
         <Text style={styles.cardText}>
           This screen is my screen of Projects...Which is still in the making.{" "}
-           </Text>
+        </Text>
       </View>
 
       {/* Buttons Section */}
       <View style={styles.buttonGroup}>
-        <TouchableOpacity style={styles.appButton} onPress={() => alert("Button Pressed!")}>
+        <TouchableOpacity
+          style={styles.appButton}
+          onPress={() => alert("Button Pressed!")}
+        >
           <Text style={styles.appButtonText}>Click Me!</Text>
         </TouchableOpacity>
 
-        <TouchableOpacity style={styles.appButton} onPress={() => alert("Second Button Pressed!")}>
+        <TouchableOpacity
+          style={styles.appButton}
+          onPress={() => alert("Second Button Pressed!")}
+        >
           <Text style={styles.appButtonText}>Second Button</Text>
         </TouchableOpacity>
 
-        <TouchableOpacity style={styles.appButton} onPress={() => alert("Third Button Pressed!")}>
+        <TouchableOpacity
+          style={styles.appButton}
+          onPress={() => alert("Third Button Pressed!")}
+        >
           <Text style={styles.appButtonText}>Third Button</Text>
         </TouchableOpacity>
 
-        <TouchableOpacity style={styles.appButton} onPress={() => alert("Fourth Button Pressed!")}>
+        <TouchableOpacity
+          style={styles.appButton}
+          onPress={() => alert("Fourth Button Pressed!")}
+        >
           <Text style={styles.appButtonText}>Fourth Button</Text>
         </TouchableOpacity>
       </View>
 
-      {/* Final Button */}
+      {/* Footer */}
       <View style={styles.footer}>
         <Text style={styles.footerText}>Wazzup Sir</Text>
+
+        {/* Spotify Login Button */}
         <TouchableOpacity
           style={styles.finalButton}
           onPress={() => navigation.navigate("SpotifyLogin")}
         >
           <Text style={styles.finalButtonText}>Go to Spotify Login</Text>
+        </TouchableOpacity>
+
+        {/* NEW Map Location Button */}
+        <TouchableOpacity
+          style={[styles.finalButton, { marginTop: 15 }]}
+          onPress={() => navigation.navigate("MapScreen")}
+        >
+          <Text style={styles.finalButtonText}>Map Location</Text>
         </TouchableOpacity>
       </View>
     </ScrollView>
